@@ -4,13 +4,13 @@ public class Main {
 
 	
 	public static void main (String[] args) {
-		No no1= new No("conteudo no 1");
+		No<String> no1= new No("conteudo no 1");
 		
-		No no2= new No("conteudo no 2");
+		No<String> no2= new No("conteudo no 2");
 
-		No no3= new No("conteudo no 3");
+		No<String> no3= new No("conteudo no 3");
 		
-		No no4= new No("conteudo no 4");
+		No<String> no4= new No("conteudo no 4");
 
 		
 		no1.setProximo(no2);

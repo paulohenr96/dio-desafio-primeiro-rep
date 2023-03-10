@@ -1,13 +1,13 @@
 package aula.no;
 
-public class No {
+public class No<T>{
 	
 	
-	private String conteudo;
+	private T conteudo;
 	private No proximo;
 	
 	
-	public No(String conteudo) {
+	public No(T conteudo) {
 		super();
 		this.conteudo = conteudo;
 	}
@@ -17,10 +17,10 @@ public class No {
 	public void setProximo(No proximo) {
 		this.proximo = proximo;
 	}
-	public String getConteudo() {
+	public T getConteudo() {
 		return conteudo;
 	}
-	public void setConteudo(String conteudo) {
+	public void setConteudo(T conteudo) {
 		this.conteudo = conteudo;
 	}
 	@Override
