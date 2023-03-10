@@ -1,8 +1,8 @@
 package com.paulo;
 
-public class Fila {
+public class Fila<T> {
 
-	private No refEntradaFila;
+	private No<T> refEntradaFila;
 	
 	public Fila() {
 		// TODO Auto-generated constructor stub
@@ -11,14 +11,14 @@ public class Fila {
 	}
 	
 	
-	public void enqueue(Object obj) {
+	public void enqueue(T obj) {
 		No novoNo= new No(obj);
 		novoNo.setRefNo(refEntradaFila);
 		
 		refEntradaFila=novoNo;
 	}
 	
-	public Object first() {
+	public T first() {
 		if (!isEmpty()) {
 			No primeiroNo=refEntradaFila;
 			
@@ -29,12 +29,12 @@ public class Fila {
 					break;
 				}
 			}
-			return primeiroNo.getObject();
+			return (T)primeiroNo.getObject();
 		}
 		return null;
 	}
 	
-	public Object deQueue() {
+	public T deQueue() {
 		if (!isEmpty()) {
 			No primeiroNo=refEntradaFila;
 			No noAuxiliar=refEntradaFila;
@@ -48,7 +48,7 @@ public class Fila {
 					break;
 				}
 			}
-			return primeiroNo.getObject();
+			return (T)primeiroNo.getObject();
 		}
 		return null;
 	}
